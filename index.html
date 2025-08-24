@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+  <!-- Logo style -->
+    <style>
+        .navbar-brand img {
+            width: auto;
+            height:40px;
+        }
+/* Navbar custom style */
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: #E80E2C;">
+    <div class="container">
+
+      <!-- Logo and Brand Name -->
+      <a class="navbar-brand" href="index.html">
+        <img src="menyala_logo.png" alt="Logo" class="me-2" height="30"> 
+        Menyala Digital Training
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Beranda</a>
+          </li> 
+          <li class="nav-item"><a class="nav-link" href="#">Pelatihan</a></li> 
+          <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+ <!-- informasi lembaga pelatihan -->
+<section class="bg-light py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Foto di sebelah kiri -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="pelatihan_images.png" alt="Kegiatan Pelatihan" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Teks di sebelah kanan -->
+      <div class="col-md-6">
+        <h2 class="mb-3">Menyala Digital Training</h2>
+
+        <p>Belajar dari mentor ahli + raih Sertifikat BNSP & Internasional yang diakui di pasar kerja nasional maupun global. Kenapa Harus Menyala Digital Training?</p>
+        
+        <ul class="mb-3">
+            <li>
+              <strong>Sertifikat Resmi BNSP</strong> – Dapatkan pengakuan resmi dari Badan Nasional Sertifikasi Profesi
+              yang menjadi standar nasional di Indonesia, memastikan kompetensi Anda diakui oleh industri.
+            </li>
+            <li>
+              <strong>Sertifikat Internasional</strong> – Tingkatkan kredibilitas dan peluang karier di kancah global
+              dengan sertifikasi yang diakui di berbagai negara.
+            </li>
+            <li>
+              <strong>Mentor Berpengalaman</strong> – Belajar langsung dari praktisi industri yang memiliki
+              pengalaman nyata serta studi kasus relevan.
+            </li>
+            <li>
+              <strong>Kesempatan Magang</strong> – Peserta berprestasi berpeluang mengikuti program magang
+              eksklusif di perusahaan mitra.
+            </li>
+          </ul>
+
+        <p> Daftar sekarang, kuasai skill digital, raih sertifikat bergengsi, dan buka pintu karier impianmu—mulai belajar, mulai sukses! </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Daftar Pelatihan -->
+<section class="py-5" style="background-color: #d5d5d5;">
+  <div class="container">
+    <h2 class="mb-4 text-center">Daftar Pelatihan Tersedia</h2>
+
+<!--class row-->
+    <div class="row g-4">
+
+      <!-- Pelatihan card 1-->
+       
+       <!-- Card for Data Science -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-bar-chart-line-fill me-2 text-primary"></i>
+              Data Science Dasar
+            </h5>
+            <p class="card-text">Pengenalan data science untuk pemula.</p>
+            <p><strong>Topik :</strong> Python, Statistik</p>
+            <p><strong>Tanggal :</strong> 15 - 25 Agustus 2025</p>
+            <div class="text-end">
+              <button class="btn btn-danger" onclick="window.location.href='daftarPelatihan.html?course=Data%20Science%20Dasar'">
+                Daftar Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card for Digital Marketing -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-bar-chart-line-fill me-2 text-primary"></i>
+              Digital Marketing
+            </h5>
+            <p class="card-text">Strategi pemasaran digital untuk UMKM.</p>
+            <p><strong>Topik :</strong> SEO, Ads, Media Sosial</p>
+            <p><strong>Tanggal :</strong> 25 - 30 Agustus 2025</p>
+            <div class="text-end">
+              <button class="btn btn-danger" onclick="window.location.href='daftarPelatihan.html?course=Digital%20Marketing'">
+                Daftar Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- Card for UI/UX Design -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-bar-chart-line-fill me-2 text-primary"></i>
+                    Desain UI/UX
+                  </h5>
+                  <p class="card-text">Belajar desain antarmuka yang menarik & intuitif.</p>
+                  <p><strong>Topik :</strong>  Figma, Prototype.</p>
+                  <p><strong>Tanggal :</strong> 1 - 10 September 2025.</p>
+                  <div class="text-end">
+                    <button class="btn btn-danger" onclick="window.location.href='daftarPelatihan.html?course=Desain%20UI/UX'">
+                      Daftar Sekarang
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!-- Card for Web Development -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-bar-chart-line-fill me-2 text-primary"></i>
+                    Web Development
+                  </h5>
+                  <p class="card-text">Membuat website responsif dengan : 
+                    HTML, CSS dan JS.</p>
+                  <p><strong>Topik :</strong>  Frontend, Responsive.</p>
+                  <p><strong>Tanggal :</strong> 1 - 30 September 2025.</p>
+                  <div class="text-end">
+                    <button class="btn btn-danger" onclick="window.location.href='daftarPelatihan.html?course=Web%20Development'">
+                      Daftar Sekarang
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+             <!-- Card for Manajemen Basis Data -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-bar-chart-line-fill me-2 text-primary"></i>
+                    Manajemen Basis Data
+                  </h5>
+                  <p class="card-text">Belajar pengelolaan database relasional.</p>
+                  <p><strong>Topik :</strong>  SQL, PostgreSQL.</p>
+                  <p><strong>Tanggal :</strong> 20 - 30 September 2025.</p>
+                  <div class="text-end">
+                    <button class="btn btn-danger" onclick="window.location.href='daftarPelatihan.html?course=Manajemen%20Basis%20Data'">
+                      Daftar Sekarang
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!-- Card for Keamanan Siber -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-bar-chart-line-fill me-2 text-primary"></i>
+                    Keamanan Siber Dasar
+                  </h5>
+                  <p class="card-text">Perlindungan sistem dan data digital.</p>
+                  <p><strong>Topik :</strong>  Cybersecurity, Enkripsi.</p>
+                  <p><strong>Tanggal :</strong> 1 - 30 Oktober 2025.</p>
+                  <div class="text-end">
+                    <button class="btn btn-danger" onclick="window.location.href='daftarPelatihan.html?course=Keamanan%20Siber%20Dasar'">
+                      Daftar Sekarang
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!--footer-->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p><strong>Menyala Digital Training</strong></p>
+      <p>Email : info@menyala.id | Telpon : (031) 12345678</p>
+
+      <!--Social Media Links-->
+      <div>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+      </div>
+      
+      <p class="mt-3 mb-0">&copy; 2023 Menyala Digital Training. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+</body>
+</html>

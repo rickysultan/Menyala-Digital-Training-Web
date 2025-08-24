@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+  <!-- Logo style -->
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+    .navbar-brand img {
+      width: auto;
+      height: 40px;
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: white;
+    }
+    
+    /* Form container responsive */
+    .form-container {
+      max-width: 700px;   /* maksimal lebar di desktop */
+      margin: 0 auto;     /* center horizontal */
+      padding: 0 20px;    /* padding sisi untuk mobile */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: #E80E2C;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"> <!--logo ke index html-->
+        <img src="menyala_logo.png" alt="Logo" class="me-2" height="30"> 
+        Menyala Digital Training
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Beranda</a>
+          </li> 
+          <li class="nav-item"><a class="nav-link" href="#">Pelatihan</a></li> 
+          <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="form-container mt-5">
+      <h2 class="text-center mb-4">Formulir Pendaftaran</h2>
+  
+      <form id="formPendaftaran">
+        <!-- Nama Pelatihan -->
+          <div class="mb-3 row">
+            <label for="namaPelatihan" class="col-sm-3 col-form-label">Nama Pelatihan</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="namaPelatihan" readonly required>
+            </div>
+          </div>
+
+        <script>
+          // Ambil query string
+          const params = new URLSearchParams(window.location.search);
+          const course = params.get("course");
+
+          if (course) {
+            document.getElementById("namaPelatihan").value = course;
+          }
+        </script>
+  
+        <!-- Tanggal Pelatihan -->
+        <div class="mb-3 row">
+          <label for="tanggalPelatihan" class="col-sm-3 col-form-label">Tanggal Pelatihan</label>
+          <div class="col-sm-9">
+            <input type="date" class="form-control" id="tanggalPelatihan" readonly>
+          </div>
+        </div>
+
+        <script>
+          // Ambil tanggal hari ini dalam format YYYY-MM-DD
+          const today = new Date().toISOString().split('T')[0];
+          document.getElementById('tanggalPelatihan').value = today;
+        </script>
+  
+        <!-- Nama Lengkap -->
+        <div class="mb-3 row">
+          <label for="namaLengkap" class="col-sm-3 col-form-label">Nama Lengkap</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan nama lengkap" required>
+          </div>
+        </div>
+  
+        <!-- Email -->
+        <div class="mb-3 row">
+          <label for="email" class="col-sm-3 col-form-label">Email</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+          </div>
+        </div>
+  
+        <!-- No HP -->
+        <div class="mb-3 row">
+          <label for="noHp" class="col-sm-3 col-form-label">No. HP</label>
+          <div class="col-sm-9">
+            <input type="tel" class="form-control" id="noHp" placeholder="Masukkan nomor HP" required>
+          </div>
+        </div>
+  
+        <!-- Instansi -->
+        <div class="mb-3 row">
+          <label for="instansi" class="col-sm-3 col-form-label">Instansi / Sekolah</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="instansi" placeholder="Masukkan Instansi atau Sekolah" required>
+          </div>
+        </div>
+  
+        <!-- Tombol Daftar -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-danger px-4">Daftar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  
+  <!-- Script -->
+  <script>
+    document.getElementById("formPendaftaran").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      // Ambil nilai input
+      const namaPelatihan = encodeURIComponent(document.getElementById("namaPelatihan").value);
+      const tanggalPelatihan = encodeURIComponent(document.getElementById("tanggalPelatihan").value);
+      const namaLengkap = encodeURIComponent(document.getElementById("namaLengkap").value);
+      const email = encodeURIComponent(document.getElementById("email").value);
+      const noHp = encodeURIComponent(document.getElementById("noHp").value);
+      const instansi = encodeURIComponent(document.getElementById("instansi").value);
+  
+      // Arahkan ke halaman hasil
+      window.location.href =
+        `hasilPendaftaran.html?pelatihan=${namaPelatihan}&tanggal=${tanggalPelatihan}&nama=${namaLengkap}&email=${email}&nohp=${noHp}&instansi=${instansi}`;
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container">
+      <p><strong>Menyala Digital Training</strong></p>
+      <p>Email : info@menyala.id | Telpon : (031) 12345678</p>
+      <div>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+      </div>
+      <p class="mt-3 mb-0">&copy; 2023 Menyala Digital Training. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
