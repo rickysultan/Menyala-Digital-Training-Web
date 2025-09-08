@@ -43,16 +43,6 @@
               <input type="text" class="form-control" id="namaPelatihan" readonly required>
             </div>
           </div>
-
-        <script>
-          // Ambil query string
-          const params = new URLSearchParams(window.location.search);
-          const course = params.get("course");
-
-          if (course) {
-            document.getElementById("namaPelatihan").value = course;
-          }
-        </script>
   
         <!-- Tanggal Pelatihan -->
         <div class="mb-3 row">
@@ -61,12 +51,6 @@
             <input type="date" class="form-control" id="tanggalPelatihan" readonly>
           </div>
         </div>
-
-        <script>
-          // Ambil tanggal hari ini dalam format YYYY-MM-DD
-          const today = new Date().toISOString().split('T')[0];
-          document.getElementById('tanggalPelatihan').value = today;
-        </script>
   
         <!-- Nama Lengkap -->
         <div class="mb-3 row">
@@ -108,25 +92,6 @@
     </section>
   </main>
   
-  <!-- Script -->
-  <script>
-    document.getElementById("formPendaftaran").addEventListener("submit", function(event) {
-      event.preventDefault();
-  
-      // Ambil nilai input
-      const namaPelatihan = encodeURIComponent(document.getElementById("namaPelatihan").value);
-      const tanggalPelatihan = encodeURIComponent(document.getElementById("tanggalPelatihan").value);
-      const namaLengkap = encodeURIComponent(document.getElementById("namaLengkap").value);
-      const email = encodeURIComponent(document.getElementById("email").value);
-      const noHp = encodeURIComponent(document.getElementById("noHp").value);
-      const instansi = encodeURIComponent(document.getElementById("instansi").value);
-  
-      // Arahkan ke halaman hasil
-      window.location.href =
-        `hasilPendaftaran.html?pelatihan=${namaPelatihan}&tanggal=${tanggalPelatihan}&nama=${namaLengkap}&email=${email}&nohp=${noHp}&instansi=${instansi}`;
-    });
-  </script>
-
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-4 mt-auto">
     <div class="container">
